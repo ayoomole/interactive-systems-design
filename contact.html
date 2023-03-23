@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="header-contact">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="menu.html">menu</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h2 class="heading-light">Get In Touch With Us</h2>
+        <p>We'd love to hear from you!</p>
+        <form class="contact">
+          <fieldset>
+            <label for=""> Your Name </label>
+            <input placeholder="John Doe" type="text" />
+          </fieldset>
+          <fieldset>
+            <label for=""> Your Email Address </label>
+            <input placeholder="john@example.com" type="email" />
+          </fieldset>
+
+          <fieldset><label for=""> Interested In </label></fieldset>
+          <div>
+            <span class="interest">
+              <label for="croissants">Croissants</label>
+              <input
+                type="radio"
+                id="croissants"
+                name="fav_offering"
+                value="croissants"
+              />
+              <label for="cake">Cakes</label>
+              <input type="radio" id="cake" name="fav_offering" value="cake" />
+              <label for="cookies">Cookies</label>
+              <input
+                type="radio"
+                id="cookies"
+                name="fav_offering"
+                value="Cookies"
+              />
+            </span>
+          </div>
+
+          <fieldset>
+            <label for=""> Quantity</label>
+            <input
+              placeholder="Order up to 30 pieces"
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              max="30"
+            />
+          </fieldset>
+          <fieldset>
+            <label for=""> Pickup Date </label>
+            <input type="date" id="date" name="date" />
+          </fieldset>
+          <div class="checkbox-pickup">
+            <span>
+              <input type="checkbox" id="pickup" name="pickup" value="yes" />
+              <label for="pickup"> Pick up from the cafe </label><br />
+            </span>
+          </div>
+
+          <fieldset>
+            <input class="cool-btn-submit" type="button" value="Submit" />
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
